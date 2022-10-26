@@ -1,0 +1,7 @@
+print("|++++++++++++++++++++++|")
+print("|                   |")
+print("|  Welcome to HFUT  |")
+print("|                   |")
+print("|++++++++++++++++++++++|")
+name=input("请输入姓名")
+print(f"欢迎您，{name}同学!")
