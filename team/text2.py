@@ -71,7 +71,7 @@ def scanner(num, iterations_, len_):  # 识别函数，num:识别第几张图，
     find = cv2.blur(find, (20, 20))
     # 将原灰度图gray与模糊处理后的图像find进行像素值相加(add),由于模糊处理后的杂志的像素值会变得很高，即很亮，故相加后它在图像中会接近于“消失”！，以此来消除杂质
     find = cv2.add(find, gray)  # 进行图像变换处理
-    # 图像二值化反转，让背景变黑，待圈出区域变白
+    # 图像二值化反转，让背景变黑，待圈出区域变白，突出其轮廓
     ret1, thresh1 = cv2.threshold(find, 90, 255, cv2.THRESH_BINARY_INV)
     # 寻找轮廓
     contours, hierarchy = cv2.findContours(thresh1, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
